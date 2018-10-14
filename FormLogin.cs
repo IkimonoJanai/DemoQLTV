@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DemoQuanLyThuVien.DAO;
 
 namespace DemoQuanLyThuVien
 {
@@ -36,41 +37,66 @@ namespace DemoQuanLyThuVien
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            // 1: admin 
-            FormUsers f = new FormUsers();
-            // 2: users 
-            FormAdmin fAd = new FormAdmin();
 
-            //show neither admin or guest
-            if (rdAdmin.Checked == true)
-            {  
+            // try to input in password secsion ' or 1=1 -- 
+
+            string userName = txtName.Text;
+            string passWord = txtPassword.Text;
+
+
+            if (LoginAdmin(userName, passWord))
+            {
+                // 1: admin 
+                FormAdmin fAd = new FormAdmin();
                 this.Hide();
                 fAd.ShowDialog();
                 this.Show();
             }
-            else if(rdGuest.Checked == true)
+            else
             {
+                MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+            }
+
+            //---=====================================================================================
+
+            if (LoginGuest(userName, passWord))
+            {
+                // 2: users 
+                FormUsers f = new FormUsers();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
+            else
+            {
+                MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+            }
 
-            //viet dai di giao su
-            ////string id, ncc, add;
-            //string cnString = "SERVER = .; DATABASE = CoffeeShop; INTEGRATED SECURITY = true";
-            //SqlConnection cn = new SqlConnection(cnString);
-            //cn.Open();
-            //// COUNT username trong database
-            ////string sql = "SELECT COUNT(Id) FROM Id WHERE UserName = '" + user + "' AND Password = '" + pass + "'";
-            ////string sql = "INSERT INTO Supplier VALUES = '"
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.Connection = cn;
-            ////cmd.CommandText = sql;
-            //cmd.CommandType = CommandType.Text;
-            ////int row = cmd.ExecuteNonQuery();
-            //int count = (int)cmd.ExecuteScalar();// lay gia tri
 
-            //cn.Close();
+
+
+            //show neither admin or guest
+            //if (rdAdmin.Checked == true)
+            //{  
+            //    this.Hide();
+            //    fAd.ShowDialog();
+            //    this.Show();
+            //}
+            //else if(rdGuest.Checked == true)
+            //{
+            //    this.Hide();
+            //    f.ShowDialog();
+            //    this.Show();
+            //}
+        }
+
+        bool LoginAdmin(string userName, string passWord)
+        {
+            return AccountDAO.Instance.LoginAdmin(userName, passWord);
+        }
+        bool LoginGuest(string userName, string passWord)
+        {
+            return AccountDAO.Instance.LoginGuest(userName, passWord);
         }
     }
 }

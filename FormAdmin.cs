@@ -16,9 +16,6 @@ namespace DemoQuanLyThuVien
         public FormAdmin()
         {
             InitializeComponent();
-
-            LoadAccountList();
-            LoadAccountList2();
         }
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,31 +29,11 @@ namespace DemoQuanLyThuVien
             fAdmin.ShowDialog();
         }
 
-        void LoadAccountList2()
-        {
-            //string sql = "EXEC dbo.USP_GetAccountByUserName @userName , @userName ";//@userName , @userName";
-            //dtgvAdminProfit.DataSource = DataProvider.Instance.ExecuteQuery(sql, new object[] { "Admin","staff" });
-            string sql = "select * from Account ";//@userName , @userName";
-            dtgvAdminProfit.DataSource = DataProvider.Instance.ExecuteQuery(sql);
-        }
 
 
-        void LoadAccountList()
-        {       
-            string sql = "EXEC dbo.USP_GetAccountByUserName @userName ";//@userName , @userName";
-
-            dtgvBook.DataSource = DataProvider.Instance.ExecuteQuery(sql, new object[] { "staff" }); // new object[]{"admin","staff"}
-        }
 
 
-            /*
-             * ********************* button load *********************************
-             * 
-             * 
-             * 
-             * 
-             */
-
+       
             // Data Reader
             // load account
             //string UserName, DisplayName, PassWord, Type;

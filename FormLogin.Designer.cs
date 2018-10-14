@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btExit = new System.Windows.Forms.Button();
             this.btLogin = new System.Windows.Forms.Button();
             this.rdAdmin = new System.Windows.Forms.RadioButton();
@@ -52,7 +52,8 @@
             this.txtName.Location = new System.Drawing.Point(86, 22);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(165, 20);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
+            this.txtName.Text = "Admin";
             // 
             // label2
             // 
@@ -63,19 +64,21 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPassword.Location = new System.Drawing.Point(86, 61);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(165, 20);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "123";
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btExit
             // 
             this.btExit.Location = new System.Drawing.Point(176, 105);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(75, 23);
-            this.btExit.TabIndex = 2;
+            this.btExit.TabIndex = 3;
             this.btExit.Text = "Thoát";
             this.btExit.UseVisualStyleBackColor = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
@@ -98,6 +101,7 @@
             this.rdAdmin.Name = "rdAdmin";
             this.rdAdmin.Size = new System.Drawing.Size(54, 17);
             this.rdAdmin.TabIndex = 3;
+            this.rdAdmin.TabStop = true;
             this.rdAdmin.Text = "Admin";
             this.rdAdmin.UseVisualStyleBackColor = true;
             // 
@@ -121,7 +125,7 @@
             this.Controls.Add(this.rdAdmin);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.btExit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
@@ -140,7 +144,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.RadioButton rdAdmin;
