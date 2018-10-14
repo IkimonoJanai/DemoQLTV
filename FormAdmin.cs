@@ -18,6 +18,7 @@ namespace DemoQuanLyThuVien
             InitializeComponent();
 
             LoadAccountList();
+            LoadAccountList2();
         }
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,29 +32,20 @@ namespace DemoQuanLyThuVien
             fAdmin.ShowDialog();
         }
 
-        void LoadAccountList()
+        void LoadAccountList2()
         {
-            
-            /*
-             * **************************************************************************************************************
-             */
-            //Data Table , Data Provider
-            // Load Account
-            //string cnStr = "Data Source=.\\SQLEXPRESS;Initial Catalog=DemoQuanLyThuVienAlpha;Integrated Security=True";
-            //SqlConnection cn = new SqlConnection(cnStr);
-            //cn.Open();
-            //string sql = "SELECT * FROM Account";
-            //SqlCommand cmd = new SqlCommand(sql, cn);
-            //DataTable data = new DataTable();
-            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            //adapter.Fill(data);
-            //cn.Close();
-            //dtgvBook.DataSource = data;
+            //string sql = "EXEC dbo.USP_GetAccountByUserName @userName , @userName ";//@userName , @userName";
+            //dtgvAdminProfit.DataSource = DataProvider.Instance.ExecuteQuery(sql, new object[] { "Admin","staff" });
+            string sql = "select * from Account ";//@userName , @userName";
+            dtgvAdminProfit.DataSource = DataProvider.Instance.ExecuteQuery(sql);
+        }
 
-            string sql = "SELECT * FROM Account";
-            DataProvider provider = new DataProvider();
-            dtgvBook.DataSource = provider.ExecuteQuery(sql);
 
+        void LoadAccountList()
+        {       
+            string sql = "EXEC dbo.USP_GetAccountByUserName @userName ";//@userName , @userName";
+
+            dtgvBook.DataSource = DataProvider.Instance.ExecuteQuery(sql, new object[] { "staff" }); // new object[]{"admin","staff"}
         }
 
 
@@ -170,6 +162,6 @@ namespace DemoQuanLyThuVien
             //    {
             //        MessageBox.Show("cập nhật thất bại");
             //    }
-        }
+        //}
     }
 }

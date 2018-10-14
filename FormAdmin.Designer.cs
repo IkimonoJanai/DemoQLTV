@@ -43,7 +43,7 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvAdminProfit = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btXemDoangThu = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -88,7 +88,7 @@
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAdminProfit)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmBookPrice)).BeginInit();
@@ -223,19 +223,19 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dtgvAdminProfit);
             this.panel3.Location = new System.Drawing.Point(7, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 242);
             this.panel3.TabIndex = 0;
             // 
-            // dataGridView1
+            // dtgvAdminProfit
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(294, 207);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgvAdminProfit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvAdminProfit.Location = new System.Drawing.Point(22, 16);
+            this.dtgvAdminProfit.Name = "dtgvAdminProfit";
+            this.dtgvAdminProfit.Size = new System.Drawing.Size(294, 207);
+            this.dtgvAdminProfit.TabIndex = 0;
             // 
             // panel2
             // 
@@ -620,7 +620,7 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAdminProfit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -656,7 +656,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvAdminProfit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btXemDoangThu;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
