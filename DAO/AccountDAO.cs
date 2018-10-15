@@ -18,22 +18,15 @@ namespace DemoQuanLyThuVien.DAO
 
         private AccountDAO() { }
 
-        public bool LoginAdmin(string userName, string passWord)
+        public bool Login(string userName, string passWord)
         {
-            string sql = "SELECT * FROM dbo.Account WHERE UserName = N'Admin' AND PassWord = N'123' ";
-
-            DataTable result = DataProvider.Instance.ExecuteQuery(sql);
+            //string sql = "SELECT * FROM dbo.Account WHERE UserName = N'" + userName + "' AND PassWord = N'" + passWord + "' ";
+            string sql = "USP_Login @userName , @passWord";
+            DataTable result = DataProvider.Instance.ExecuteQuery(sql ,new object[] {@userName , @passWord});
 
             return result.Rows.Count > 0;
         }
-        public bool LoginGuest(string userName, string passWord)
-        {
-            string sql = "SELECT * FROM dbo.Account WHERE UserName = N'" + userName + "' AND PassWord = N'" + passWord + "' ";
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(sql);
-
-            return result.Rows.Count > 0;
-        }
 
     }
 }

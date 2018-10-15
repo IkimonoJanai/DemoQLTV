@@ -39,29 +39,19 @@ namespace DemoQuanLyThuVien
         {
 
             // try to input in password secsion ' or 1=1 -- 
-
+            //sinh vien ko can dang nhap 
+            //---trong frmAdmin
+            // neu sinh vien khong nhap MSSV thi ko cho them
             string userName = txtName.Text;
             string passWord = txtPassword.Text;
-
-
-            if (LoginAdmin(userName, passWord))
+            //-----------=============================================================================
+            /* 
+             *--------original
+             * 
+             */
+            if (Login(userName, passWord))
             {
-                // 1: admin 
-                FormAdmin fAd = new FormAdmin();
-                this.Hide();
-                fAd.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
-            }
-
-            //---=====================================================================================
-
-            if (LoginGuest(userName, passWord))
-            {
-                // 2: users 
+                // user
                 FormUsers f = new FormUsers();
                 this.Hide();
                 f.ShowDialog();
@@ -69,12 +59,47 @@ namespace DemoQuanLyThuVien
             }
             else
             {
-                MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+                MessageBox.Show("sai tên hoặc mật khẩu , vui lòng thử lại");
             }
+            //--==============================================================
+            // test paralle admin , guest
+            //if(LoginAdmin(userName , passWord) == true)
+            //{
+            //    FormAdmin fad = new FormAdmin();
+            //    this.Hide();
+            //    fad.ShowDialog();
+            //    this.Show();
+            //}
+            //else if(LoginGuest(userName , passWord) == true)
+            //{
+            //    FormAdmin fAd = new FormAdmin();
+            //    this.Hide();
+            //    fAd.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+            //}
+
+            ////---=====================================================================================
+
+            //if (LoginGuest(userName, passWord))
+            //{
+            //    // 2: users 
+            //    FormUsers f = new FormUsers();
+            //    this.Hide();
+            //    f.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+            //}
 
 
-
-
+            //--------====================================================================================
+            //noob
             //show neither admin or guest
             //if (rdAdmin.Checked == true)
             //{  
@@ -88,15 +113,13 @@ namespace DemoQuanLyThuVien
             //    f.ShowDialog();
             //    this.Show();
             //}
+            //-=======================================================
         }
 
-        bool LoginAdmin(string userName, string passWord)
+        bool Login(string userName, string passWord)
         {
-            return AccountDAO.Instance.LoginAdmin(userName, passWord);
+            return AccountDAO.Instance.Login(userName, passWord);
         }
-        bool LoginGuest(string userName, string passWord)
-        {
-            return AccountDAO.Instance.LoginGuest(userName, passWord);
-        }
+
     }
 }

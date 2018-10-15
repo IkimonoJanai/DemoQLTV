@@ -21,6 +21,10 @@ namespace DemoQuanLyThuVien
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            FormUsers f = new FormUsers();
+            this.Hide();
+            f.ShowDialog();
+            
         }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
