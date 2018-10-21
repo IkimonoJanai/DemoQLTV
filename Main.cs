@@ -15,14 +15,10 @@ namespace DemoQuanLyThuVien
         {
             InitializeComponent();
         }
-
-
-
         private void label2_MouseHover(object sender, EventArgs e)
         {
             
         }
-
         private void label2_MouseLeave(object sender, EventArgs e)
         {
 
@@ -30,23 +26,65 @@ namespace DemoQuanLyThuVien
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //this.Show();
-            //this.Enabled = false;
 
-           // FormLogin frmLogin = new FormLogin();
-           // DialogResult result = frmLogin.ShowDialog();
-
-            //if (result == DialogResult.OK)
-            //{
-            //    this.Enabled = true;
-
-            //}
         }
 
-        private void btOrder_Click(object sender, EventArgs e)
+        #region Method
+        #endregion
+
+        #region Property
+        #endregion
+
+        #region Events
+        private void btRent_Click(object sender, EventArgs e)
         {
+            /***Đăng nhập***************************************************************************/
 
+            fRentBookLogin fRBL = new fRentBookLogin();
+            this.Hide();
+            fRBL.ShowDialog();
+            this.Show();
+
+            /***Không đăng nhập***************************************************************************/
+
+            //fRentBook fRB = new fRentBook();
+            //this.Hide();
+            //fRB.ShowDialog();
+            //this.Show();
         }
-        //void ShowPIc 
+
+        private void btRentList_Click(object sender, EventArgs e)
+        {
+            fRentList fRL = new fRentList();
+            this.Hide();
+            fRL.ShowDialog();
+            this.Show();
+        }
+
+        private void btBookList_Click(object sender, EventArgs e)
+        {
+            fBookList fBL = new fBookList();
+            this.Hide();
+            fBL.ShowDialog();
+            this.Show();
+        }
+
+        private void btfUserList_Click(object sender, EventArgs e)
+        {
+            fUserList fUL = new fUserList();
+            this.Hide();
+            fUL.ShowDialog();
+            this.Show();
+        }
+        #endregion 
+
+        //#region Method
+        //#endregion
+        //#region Property
+        //#endregion
+        //#region Events
+        //#endregion
+
+
     }
 }

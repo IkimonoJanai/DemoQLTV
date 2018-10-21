@@ -46,9 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
+    <Compile Include="DTO\Account.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="fBookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBookList.Designer.cs">
+      <DependentUpon>fBookList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRentBookBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRentBookBill.Designer.cs">
+      <DependentUpon>fRentBookBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,36 @@
     </Compile>
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRentBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRentBook.Designer.cs">
+      <DependentUpon>fRentBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRentBookLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRentBookLogin.Designer.cs">
+      <DependentUpon>fRentBookLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRentBookSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRentBookSignUp.Designer.cs">
+      <DependentUpon>fRentBookSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRentList.Designer.cs">
+      <DependentUpon>fRentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUserList.Designer.cs">
+      <DependentUpon>fUserList.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -73,28 +115,40 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSachA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSachA.Designer.cs">
-      <DependentUpon>frmSachA.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fBookList.resx">
+      <DependentUpon>fBookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRentBookBill.resx">
+      <DependentUpon>fRentBookBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fRentBook.resx">
+      <DependentUpon>fRentBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRentBookLogin.resx">
+      <DependentUpon>fRentBookLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRentBookSignUp.resx">
+      <DependentUpon>fRentBookSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRentList.resx">
+      <DependentUpon>fRentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUserList.resx">
+      <DependentUpon>fUserList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSachA.resx">
-      <DependentUpon>frmSachA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,8 +173,15 @@
   <ItemGroup>
     <None Include="Resources\asdasdasd.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DTO\" />
+    <None Include="Resources\my_studio_edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_addclip_editor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37740358_265002680945844_5831663752210022400_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

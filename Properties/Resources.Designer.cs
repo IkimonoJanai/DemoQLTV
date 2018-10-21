@@ -63,9 +63,39 @@ namespace DemoQuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _37740358_265002680945844_5831663752210022400_n {
+            get {
+                object obj = ResourceManager.GetObject("37740358_265002680945844_5831663752210022400_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap asdasdasd {
             get {
                 object obj = ResourceManager.GetObject("asdasdasd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg_addclip_editor {
+            get {
+                object obj = ResourceManager.GetObject("bg_addclip_editor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap my_studio_edit_icon {
+            get {
+                object obj = ResourceManager.GetObject("my_studio_edit_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
