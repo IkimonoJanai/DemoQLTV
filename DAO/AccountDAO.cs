@@ -27,6 +27,14 @@ namespace DemoQuanLyThuVien.DAO
             return result.Rows.Count > 0;
         }
 
+        public int LoginUser(string username , string password)
+        {
+            // not fix yet 
+            // tao login cho user va admin rieng
+            string sql = "";
+
+            return 0;
+        }
 
     }
 }

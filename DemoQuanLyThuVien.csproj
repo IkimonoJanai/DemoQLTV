@@ -46,108 +46,119 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\BookDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="fBookList.cs">
+    <Compile Include="DTO\Book.cs" />
+    <Compile Include="fBookList\fBookList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fBookList.Designer.cs">
+    <Compile Include="fBookList\fBookList.Designer.cs">
       <DependentUpon>fBookList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRentBookBill.cs">
+    <Compile Include="fOrigin\fHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRentBookBill.Designer.cs">
+    <Compile Include="fOrigin\fHomePage.Designer.cs">
+      <DependentUpon>fHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRentBook\fRentBookBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRentBook\fRentBookBill.Designer.cs">
       <DependentUpon>fRentBookBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAdmin.cs">
+    <Compile Include="fOrigin\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAdmin.Designer.cs">
+    <Compile Include="fOrigin\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsers.cs">
+    <Compile Include="fOrigin\FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsers.Designer.cs">
+    <Compile Include="fOrigin\FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRentBook.cs">
+    <Compile Include="fRentBook\fRentBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRentBook.Designer.cs">
+    <Compile Include="fRentBook\fRentBook.Designer.cs">
       <DependentUpon>fRentBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRentBookLogin.cs">
+    <Compile Include="fRentBook\fRentBookLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRentBookLogin.Designer.cs">
+    <Compile Include="fRentBook\fRentBookLogin.Designer.cs">
       <DependentUpon>fRentBookLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRentBookSignUp.cs">
+    <Compile Include="fRentBook\fRentBookSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRentBookSignUp.Designer.cs">
+    <Compile Include="fRentBook\fRentBookSignUp.Designer.cs">
       <DependentUpon>fRentBookSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRentList.cs">
+    <Compile Include="fRentList\fRentList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRentList.Designer.cs">
+    <Compile Include="fRentList\fRentList.Designer.cs">
       <DependentUpon>fRentList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fUserList.cs">
+    <Compile Include="fUserList\fUserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fUserList.Designer.cs">
+    <Compile Include="fUserList\fUserList.Designer.cs">
       <DependentUpon>fUserList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="fOrigin\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="fOrigin\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="fOrigin\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="fOrigin\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fBookList.resx">
+    <EmbeddedResource Include="fBookList\fBookList.resx">
       <DependentUpon>fBookList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRentBookBill.resx">
+    <EmbeddedResource Include="fOrigin\fHomePage.resx">
+      <DependentUpon>fHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRentBook\fRentBookBill.resx">
       <DependentUpon>fRentBookBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAdmin.resx">
+    <EmbeddedResource Include="fOrigin\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsers.resx">
+    <EmbeddedResource Include="fOrigin\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRentBook.resx">
+    <EmbeddedResource Include="fRentBook\fRentBook.resx">
       <DependentUpon>fRentBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRentBookLogin.resx">
+    <EmbeddedResource Include="fRentBook\fRentBookLogin.resx">
       <DependentUpon>fRentBookLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRentBookSignUp.resx">
+    <EmbeddedResource Include="fRentBook\fRentBookSignUp.resx">
       <DependentUpon>fRentBookSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRentList.resx">
+    <EmbeddedResource Include="fRentList\fRentList.resx">
       <DependentUpon>fRentList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fUserList.resx">
+    <EmbeddedResource Include="fUserList\fUserList.resx">
       <DependentUpon>fUserList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="fOrigin\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="fOrigin\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -173,7 +184,9 @@
   <ItemGroup>
     <None Include="Resources\asdasdasd.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="NewFolder1 - Copy %282%29 - Copy %283%29\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\my_studio_edit_icon.png" />
   </ItemGroup>
