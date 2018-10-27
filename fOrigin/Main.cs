@@ -38,19 +38,11 @@ namespace DemoQuanLyThuVien
         #region Events
         private void btRent_Click(object sender, EventArgs e)
         {
-            /***Đăng nhập***************************************************************************/
 
             fRentBookLogin fRBL = new fRentBookLogin();
             this.Hide();
             fRBL.ShowDialog();
             this.Show();
-
-            /***Không đăng nhập***************************************************************************/
-
-            //fRentBook fRB = new fRentBook();
-            //this.Hide();
-            //fRB.ShowDialog();
-            //this.Show();
         }
 
         private void btRentList_Click(object sender, EventArgs e)
@@ -78,9 +70,11 @@ namespace DemoQuanLyThuVien
         }
         #endregion 
 
-        //#region Method
-        //#endregion
+
+
         //#region Property
+        //#endregion
+        //#region Method
         //#endregion
         //#region Events
         //#endregion

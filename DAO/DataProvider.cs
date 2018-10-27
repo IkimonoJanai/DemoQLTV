@@ -9,10 +9,9 @@ namespace DemoQuanLyThuVien.DAO
 {
     public class DataProvider
     {
-        private string cnStr = "Data Source=.\\SQLEXPRESS;Initial Catalog=DemoQuanLyThuVienAlpha;Integrated Security=True";
+        private string cnStr = "Data Source=BEOSAMA-PC\\SQLEXPRESS;Initial Catalog=DemoQuanLyThuVienAlphaVer1_2;Integrated Security=True";
         private static DataProvider instance;
         
-
         public static DataProvider Instance
         {
         get {if(instance == null) instance = new DataProvider(); return DataProvider.instance; }
@@ -53,7 +52,6 @@ namespace DemoQuanLyThuVien.DAO
         public int ExecuteNonQuery(string sql, object[] parameter = null)
         {
             int data = 0;
-
             using (SqlConnection cn = new SqlConnection(cnStr))
             {
                 cn.Open();
@@ -72,7 +70,6 @@ namespace DemoQuanLyThuVien.DAO
                         }
                     }
                 }
-
                 cn.Close();
             }
 
@@ -106,5 +103,8 @@ namespace DemoQuanLyThuVien.DAO
 
             return data;
         }
+
+
+
     }
 }

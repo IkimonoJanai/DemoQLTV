@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DemoQuanLyThuVien.DAO;
 
 namespace DemoQuanLyThuVien
 {
@@ -36,41 +37,89 @@ namespace DemoQuanLyThuVien
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            // 1: admin 
-            FormUsers f = new FormUsers();
-            // 2: users 
-            FormAdmin fAd = new FormAdmin();
 
-            //show neither admin or guest
-            if (rdAdmin.Checked == true)
-            {  
-                this.Hide();
-                fAd.ShowDialog();
-                this.Show();
-            }
-            else if(rdGuest.Checked == true)
+            // try to input in password secsion ' or 1=1 -- 
+            //sinh vien ko can dang nhap 
+            //---trong frmAdmin
+            // neu sinh vien khong nhap MSSV thi ko cho them
+            string userName = txtName.Text;
+            string passWord = txtPassword.Text;
+            //-----------=============================================================================
+            /* 
+             *--------original
+             * 
+             */
+            if (Login(userName, passWord))
             {
+                // user
+                FormUsers f = new FormUsers();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
+            else
+            {
+                MessageBox.Show("sai tên hoặc mật khẩu , vui lòng thử lại");
+            }
+            //--==============================================================
+            // test paralle admin , guest
+            //if(LoginAdmin(userName , passWord) == true)
+            //{
+            //    FormAdmin fad = new FormAdmin();
+            //    this.Hide();
+            //    fad.ShowDialog();
+            //    this.Show();
+            //}
+            //else if(LoginGuest(userName , passWord) == true)
+            //{
+            //    FormAdmin fAd = new FormAdmin();
+            //    this.Hide();
+            //    fAd.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+            //}
 
-            //viet dai di giao su
-            ////string id, ncc, add;
-            //string cnString = "SERVER = .; DATABASE = CoffeeShop; INTEGRATED SECURITY = true";
-            //SqlConnection cn = new SqlConnection(cnString);
-            //cn.Open();
-            //// COUNT username trong database
-            ////string sql = "SELECT COUNT(Id) FROM Id WHERE UserName = '" + user + "' AND Password = '" + pass + "'";
-            ////string sql = "INSERT INTO Supplier VALUES = '"
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.Connection = cn;
-            ////cmd.CommandText = sql;
-            //cmd.CommandType = CommandType.Text;
-            ////int row = cmd.ExecuteNonQuery();
-            //int count = (int)cmd.ExecuteScalar();// lay gia tri
+            ////---=====================================================================================
 
-            //cn.Close();
+            //if (LoginGuest(userName, passWord))
+            //{
+            //    // 2: users 
+            //    FormUsers f = new FormUsers();
+            //    this.Hide();
+            //    f.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai tên hoặc mật khẩu , vui lòng thử lại");
+            //}
+
+
+            //--------====================================================================================
+            //noob
+            //show neither admin or guest
+            //if (rdAdmin.Checked == true)
+            //{  
+            //    this.Hide();
+            //    fAd.ShowDialog();
+            //    this.Show();
+            //}
+            //else if(rdGuest.Checked == true)
+            //{
+            //    this.Hide();
+            //    f.ShowDialog();
+            //    this.Show();
+            //}
+            //-=======================================================
         }
+
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
+        }
+
     }
 }
